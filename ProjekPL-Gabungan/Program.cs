@@ -23,7 +23,7 @@ namespace ProjekPL_Gabungan
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormKasir());
+            Application.Run(new FormLogin());
         }
     }
 }
