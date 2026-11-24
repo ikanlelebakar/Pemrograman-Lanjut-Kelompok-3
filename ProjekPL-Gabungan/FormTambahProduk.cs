@@ -64,7 +64,7 @@ namespace ProjekPL_Gabungan
             HubungkanSemuaEventOtomatis();
             this.Load += FormTambahProduk_Load;
             this.Resize += (s, e) => RapikanPosisiIkonSidebar();
-            this.FormClosed += (s, e) => Application.Exit();
+            this.FormClosed += (s, e) => { if (!FormLogin.SedangBerpindah && !FormLogin.SedangKeluar) FormLogin.Instance.Show(); };
         }
 
         private T CariKontrol<T>(params string[] kandidatNama) where T : Control
@@ -455,19 +455,16 @@ namespace ProjekPL_Gabungan
             }
 
             var bDash = CariKontrol<Button>("btnDashboard");
-            if (bDash != null) bDash.Click += (s, e) => { new FormDashboard().Show(); this.Hide(); };
+            if (bDash != null) bDash.Click += (s, e) => FormLogin.Buka(this, new FormDashboard());
 
             var bKasir = CariKontrol<Button>("btnAddKasir");
-            if (bKasir != null) bKasir.Click += (s, e) => { new FormTambahKasir().Show(); this.Hide(); };
+            if (bKasir != null) bKasir.Click += (s, e) => FormLogin.Buka(this, new FormTambahKasir());
 
             var bLogout = CariKontrol<Button>("btnLogout");
             if (bLogout != null) bLogout.Click += (s, e) =>
             {
                 if (MessageBox.Show("Kembali ke halaman login?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    new FormLogin().Show();
-                    this.Hide();
-                }
+                    FormLogin.Buka(this, FormLogin.Instance);
             };
 
             HubungkanKlikIkonKeTombol("picImportGambar", "btnImportGambar");
@@ -1155,12 +1152,11 @@ namespace ProjekPL_Gabungan
 
         private void btnRiwayatStok_Click(object sender, EventArgs e)
         {
-            FormRiwayatStok frm = new FormRiwayatStok();
+            var frm = new FormRiwayatStok();
             frm.StartPosition = FormStartPosition.Manual;
             frm.Location = this.Location;
             frm.Size = this.Size;
-            frm.Show();
-            this.Hide();
+            FormLogin.Buka(this, frm);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) { }

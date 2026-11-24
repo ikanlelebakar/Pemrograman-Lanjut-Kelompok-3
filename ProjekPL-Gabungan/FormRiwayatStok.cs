@@ -62,7 +62,7 @@ namespace ProjekPL_Gabungan
             HubungkanEventOtomatis();
             this.Load += FormRiwayatStok_Load;
             this.Resize += (s, e) => RapikanSemuaElemenUI();
-            this.FormClosed += (s, e) => Application.Exit();
+            this.FormClosed += (s, e) => { if (!FormLogin.SedangBerpindah && !FormLogin.SedangKeluar) FormLogin.Instance.Show(); };
         }
 
         private IEnumerable<Control> SemuaKontrol(Control root)
@@ -365,22 +365,21 @@ namespace ProjekPL_Gabungan
             {
                 bTambahProduk.Click += (s, e) =>
                 {
-                    FormTambahProduk frm = new FormTambahProduk();
+                    var frm = new FormTambahProduk();
                     frm.StartPosition = FormStartPosition.Manual;
                     frm.Location = this.Location;
                     frm.Size = this.Size;
-                    frm.Show();
-                    this.Hide();
+                    FormLogin.Buka(this, frm);
                 };
             }
 
             var bDashboard = CariKontrol<Button>("btnDashboard");
             if (bDashboard != null)
-                bDashboard.Click += (s, e) => { new FormDashboard().Show(); this.Hide(); };
+                bDashboard.Click += (s, e) => FormLogin.Buka(this, new FormDashboard());
 
             var bAddKasir = CariKontrol<Button>("btnAddKasir");
             if (bAddKasir != null)
-                bAddKasir.Click += (s, e) => { new FormTambahKasir().Show(); this.Hide(); };
+                bAddKasir.Click += (s, e) => FormLogin.Buka(this, new FormTambahKasir());
 
             var bLogout = CariKontrol<Button>("btnLogout");
             if (bLogout != null)
@@ -388,10 +387,7 @@ namespace ProjekPL_Gabungan
                 bLogout.Click += (s, e) =>
                 {
                     if (MessageBox.Show("Kembali ke halaman login?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        new FormLogin().Show();
-                        this.Hide();
-                    }
+                        FormLogin.Buka(this, FormLogin.Instance);
                 };
             }
 
@@ -1083,12 +1079,11 @@ namespace ProjekPL_Gabungan
 
         private void btnCatatBarangKeluar_Click(object sender, EventArgs e)
         {
-            FormCatatBarangKeluar frm = new FormCatatBarangKeluar();
+            var frm = new FormCatatBarangKeluar();
             frm.StartPosition = FormStartPosition.Manual;
             frm.Location = this.Location;
             frm.Size = this.Size;
-            frm.Show();
-            this.Hide();
+            FormLogin.Buka(this, frm);
         }
     }
 }

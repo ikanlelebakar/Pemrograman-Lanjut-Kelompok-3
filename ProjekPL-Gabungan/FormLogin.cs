@@ -12,9 +12,28 @@ namespace ProjekPL_Gabungan
 {
     public partial class FormLogin : Form
     {
+        internal static FormLogin Instance { get; private set; }
+        internal static bool SedangBerpindah { get; private set; }
+        internal static bool SedangKeluar { get; private set; }
+
+        internal static void Buka(Form dari, Form tujuan)
+        {
+            SedangBerpindah = true;
+            tujuan.Show();
+            dari.Close();
+            SedangBerpindah = false;
+        }
+
+        internal static void Keluar()
+        {
+            SedangKeluar = true;
+            Application.Exit();
+        }
+
         public FormLogin()
         {
             InitializeComponent();
+            Instance = this;
             btnLogin.Click += btnLogin_Click;
         }
 
@@ -42,7 +61,7 @@ namespace ProjekPL_Gabungan
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Keluar();
         }
     }
 }

@@ -12,9 +12,9 @@ namespace ProjekPL_Gabungan
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.None;
 
-            guna2Button3.Click += (s, e) => { new FormLogin().Show(); this.Hide(); };
-            guna2Button5.Click += (s, e) => { new FormRiwayatStok().Show(); this.Hide(); };
-            guna2Button6.Click += (s, e) => { new FormTambahProduk().Show(); this.Hide(); };
+            guna2Button3.Click += (s, e) => FormLogin.Buka(this, FormLogin.Instance);
+            guna2Button5.Click += (s, e) => FormLogin.Buka(this, new FormRiwayatStok());
+            guna2Button6.Click += (s, e) => FormLogin.Buka(this, new FormTambahProduk());
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -27,7 +27,7 @@ namespace ProjekPL_Gabungan
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            FormLogin.Keluar();
         }
 
         private void pnlForm_Paint(object sender, PaintEventArgs e)
@@ -62,14 +62,12 @@ namespace ProjekPL_Gabungan
 
         private void FormTambahKasir_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            if (!FormLogin.SedangBerpindah && !FormLogin.SedangKeluar) FormLogin.Instance.Show();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            FormDashboard formDash = new FormDashboard();
-            formDash.Show();  // Buka kembali FormDashboard
-            this.Hide();      // Sembunyikan FormTambahKasir
+            FormLogin.Buka(this, new FormDashboard());
         }
 
         private void FormTambahKasir_Load(object sender, EventArgs e)

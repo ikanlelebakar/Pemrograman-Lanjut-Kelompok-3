@@ -15,7 +15,7 @@ namespace ProjekPL_Gabungan
         public FormCatatBarangKeluar()
         {
             InitializeComponent();
-            this.FormClosed += (s, e) => Application.Exit();
+            this.FormClosed += (s, e) => { if (!FormLogin.SedangBerpindah && !FormLogin.SedangKeluar) FormLogin.Instance.Show(); };
         }
 
         private void pnlSearch_Paint(object sender, PaintEventArgs e)
@@ -45,12 +45,11 @@ namespace ProjekPL_Gabungan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormRiwayatStok frm = new FormRiwayatStok();
+            var frm = new FormRiwayatStok();
             frm.StartPosition = FormStartPosition.Manual;
             frm.Location = this.Location;
             frm.Size = this.Size;
-            frm.Show();
-            this.Hide();
+            FormLogin.Buka(this, frm);
         }
     }
 }

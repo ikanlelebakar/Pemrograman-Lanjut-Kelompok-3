@@ -15,8 +15,8 @@ namespace ProjekPL_Gabungan
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.None;
 
-            guna2Button5.Click += (s, e) => { new FormRiwayatStok().Show(); this.Hide(); };
-            guna2Button6.Click += (s, e) => { new FormTambahProduk().Show(); this.Hide(); };
+            guna2Button5.Click += (s, e) => FormLogin.Buka(this, new FormRiwayatStok());
+            guna2Button6.Click += (s, e) => FormLogin.Buka(this, new FormTambahProduk());
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -55,13 +55,12 @@ namespace ProjekPL_Gabungan
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            FormLogin.Keluar();
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            new FormLogin().Show();
-            this.Hide();
+            FormLogin.Buka(this, FormLogin.Instance);
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -111,14 +110,12 @@ namespace ProjekPL_Gabungan
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            FormTambahKasir formKasir = new FormTambahKasir();
-            formKasir.Show(); // Buka FormTambahKasir
-            this.Hide();
+            FormLogin.Buka(this, new FormTambahKasir());
         }
 
         private void FormDashboard_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            if (!FormLogin.SedangBerpindah && !FormLogin.SedangKeluar) FormLogin.Instance.Show();
         }
     }
 
