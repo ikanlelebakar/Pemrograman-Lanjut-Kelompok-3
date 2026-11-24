@@ -376,19 +376,22 @@ namespace ProjekPL_Gabungan
 
             var bDashboard = CariKontrol<Button>("btnDashboard");
             if (bDashboard != null)
-                bDashboard.Click += (s, e) => MessageBox.Show("Menu Dashboard dipilih.", "Navigasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bDashboard.Click += (s, e) => { new FormDashboard().Show(); this.Hide(); };
 
             var bAddKasir = CariKontrol<Button>("btnAddKasir");
             if (bAddKasir != null)
-                bAddKasir.Click += (s, e) => MessageBox.Show("Menu Add Kasir dipilih.", "Navigasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bAddKasir.Click += (s, e) => { new FormTambahKasir().Show(); this.Hide(); };
 
             var bLogout = CariKontrol<Button>("btnLogout");
             if (bLogout != null)
             {
                 bLogout.Click += (s, e) =>
                 {
-                    if (MessageBox.Show("Keluar dari aplikasi Caffeku?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                        Application.Exit();
+                    if (MessageBox.Show("Kembali ke halaman login?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        new FormLogin().Show();
+                        this.Hide();
+                    }
                 };
             }
 

@@ -15,6 +15,7 @@ namespace ProjekPL_Gabungan
         public FormKasir()
         {
             InitializeComponent();
+            guna2Button3.Click += (s, e) => { new FormLogin().Show(); this.Hide(); };
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,7 +40,11 @@ namespace ProjekPL_Gabungan
             {
                 halamanRiwayat.StartPosition = FormStartPosition.Manual;
                 halamanRiwayat.Location = this.Location;
-                halamanRiwayat.ShowDialog();
+                if (halamanRiwayat.ShowDialog() == DialogResult.Abort)
+                {
+                    new FormLogin().Show();
+                    return;
+                }
             }
             this.Show();
         }

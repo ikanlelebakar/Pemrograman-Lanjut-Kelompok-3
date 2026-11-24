@@ -14,6 +14,9 @@ namespace ProjekPL_Gabungan
 
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.None;
+
+            guna2Button5.Click += (s, e) => { new FormRiwayatStok().Show(); this.Hide(); };
+            guna2Button6.Click += (s, e) => { new FormTambahProduk().Show(); this.Hide(); };
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -57,7 +60,8 @@ namespace ProjekPL_Gabungan
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-
+            new FormLogin().Show();
+            this.Hide();
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)

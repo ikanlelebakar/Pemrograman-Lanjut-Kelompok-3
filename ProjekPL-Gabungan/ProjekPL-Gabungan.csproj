@@ -250,5 +250,8 @@
     <None Include="Resources\lidia_SVG %282%29.png" />
     <None Include="Resources\lidia_SVG %283%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

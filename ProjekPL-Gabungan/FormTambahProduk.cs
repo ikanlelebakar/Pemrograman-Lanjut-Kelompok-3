@@ -455,16 +455,19 @@ namespace ProjekPL_Gabungan
             }
 
             var bDash = CariKontrol<Button>("btnDashboard");
-            if (bDash != null) bDash.Click += (s, e) => MessageBox.Show("Menu Dashboard dipilih.", "Navigasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (bDash != null) bDash.Click += (s, e) => { new FormDashboard().Show(); this.Hide(); };
 
             var bKasir = CariKontrol<Button>("btnAddKasir");
-            if (bKasir != null) bKasir.Click += (s, e) => MessageBox.Show("Menu Add Kasir dipilih.", "Navigasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (bKasir != null) bKasir.Click += (s, e) => { new FormTambahKasir().Show(); this.Hide(); };
 
             var bLogout = CariKontrol<Button>("btnLogout");
             if (bLogout != null) bLogout.Click += (s, e) =>
             {
-                if (MessageBox.Show("Keluar dari aplikasi Caffeku?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    Application.Exit();
+                if (MessageBox.Show("Kembali ke halaman login?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    new FormLogin().Show();
+                    this.Hide();
+                }
             };
 
             HubungkanKlikIkonKeTombol("picImportGambar", "btnImportGambar");

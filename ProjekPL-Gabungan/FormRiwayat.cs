@@ -15,6 +15,7 @@ namespace ProjekPL_Gabungan
         public FormRiwayat()
         {
             InitializeComponent();
+            guna2Button3.Click += (s, e) => { DialogResult = DialogResult.Abort; Close(); };
         }
 
         private void FormRiwayat_Load(object sender, EventArgs e)
