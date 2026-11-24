@@ -192,5 +192,63 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormCatatBarangKeluar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCatatBarangKeluar.Designer.cs">
+      <DependentUpon>FormCatatBarangKeluar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRiwayatStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRiwayatStok.Designer.cs">
+      <DependentUpon>FormRiwayatStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahProduk.Designer.cs">
+      <DependentUpon>FormTambahProduk.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormCatatBarangKeluar.resx">
+      <DependentUpon>FormCatatBarangKeluar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRiwayatStok.resx">
+      <DependentUpon>FormRiwayatStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahProduk.resx">
+      <DependentUpon>FormTambahProduk.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.png" />
+    <None Include="Resources\bahaya.png" />
+    <None Include="Resources\coklat.png" />
+    <None Include="Resources\dasboard.png" />
+    <None Include="Resources\icon_bell.png" />
+    <None Include="Resources\kasir.png" />
+    <None Include="Resources\kurang.png" />
+    <None Include="Resources\menipis.png" />
+    <None Include="Resources\panah a.png" />
+    <None Include="Resources\panah s.png" />
+    <None Include="Resources\panah t.png" />
+    <None Include="Resources\pena.png" />
+    <None Include="Resources\produk.png" />
+    <None Include="Resources\sampah.png" />
+    <None Include="Resources\tambah.png" />
+    <None Include="Resources\tersedia.png" />
+    <None Include="Resources\total produk.png" />
+    <None Include="Resources\lidia_caffeku.png" />
+    <None Include="Resources\lidia_caffeku1.png" />
+    <None Include="Resources\lidia_riwayat.png" />
+    <None Include="Resources\lidia_search.png" />
+    <None Include="Resources\lidia_SVG.png" />
+    <None Include="Resources\lidia_SVG %281%29.png" />
+    <None Include="Resources\lidia_SVG %282%29.png" />
+    <None Include="Resources\lidia_SVG %283%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

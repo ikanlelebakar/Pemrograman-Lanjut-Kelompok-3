@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -270,5 +270,80 @@
   </data>
   <data name="Frame-w" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frame-w.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lidia_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lidia_search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coklat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coklat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kurang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kurang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="produk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\produk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_bell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_bell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panah s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panah s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lidia_SVG (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lidia_SVG (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lidia_SVG (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lidia_SVG (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lidia_caffeku1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lidia_caffeku1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tersedia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tersedia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panah a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panah a.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panah t" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panah t.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menipis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menipis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lidia_SVG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lidia_SVG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dasboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dasboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kasir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kasir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lidia_caffeku" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lidia_caffeku.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bahaya" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bahaya.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lidia_riwayat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lidia_riwayat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pena" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pena.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tambah" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tambah.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lidia_SVG (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lidia_SVG (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sampah" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sampah.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="total produk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\total produk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
